@@ -13,6 +13,6 @@ class Post < ApplicationRecord
   end
 
   scope :search, -> (search) do 
-    where("title ILIKE lower(?) OR content ILIKE lower(?)", "%#{search}", "%#{search}")
+    where("title ILIKE lower(?) OR content ILIKE lower(?)", "%#{search}%", "%#{search}%")
   end
 end
