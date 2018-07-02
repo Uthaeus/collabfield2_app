@@ -5,4 +5,13 @@ Rails.application.routes.draw do
     get 'signup', to: 'devise/registrations#new'
   end
   root to: 'pages#index'
+
+  resources :posts do 
+    collection do 
+      get 'hobby'
+      get 'study'
+      get 'team'
+    end
+  end
+  
 end
