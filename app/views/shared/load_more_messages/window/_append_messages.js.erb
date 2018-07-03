@@ -1,0 +1,5 @@
+$('#<%= @id_type %><%= @conversation.id %> .load-more-messages').replaceWith('<span class="load-more-messages"></span>');
+
+$('#<%= @id_type %><%= @conversation.id %> .messages-list ul').prepend('<%= j render "#{@type}/conversations/messages/" %>');
+
+$('#<%= @id_type %><%= @conversation.id %> .messages-list').scrollTop(400);
