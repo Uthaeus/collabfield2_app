@@ -21,7 +21,7 @@ $(document).on('turbolinks:load ajax:complete', function() {
         $('.load-more-messages', this)[0].click();
         isLoading = true;
 
-        currentLoadingIcon = $('loading-more-messages', this);
+        currentLoadingIcon = $('.loading-more-messages', this);
         currentLoadingIcon.show();
       }
     }

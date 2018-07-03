@@ -9,7 +9,12 @@ if (conversation.length !== 1) {
 }
 
 $('.conversation-window:nth-of-type(' + chat_windows_count + ')\
-    form\
-    textarea').focus();
+   .conversation-heading').click();
+setTimeout(function(){ 
+  $('.conversation-window:nth-of-type(' + chat_windows_count + ')').click();
+ }, 1000);
+$('.conversation-window:nth-of-type(' + chat_windows_count + ')\
+   form\
+   textarea').focus();
 
 positionChatWindows();
