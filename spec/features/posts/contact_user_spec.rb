@@ -17,7 +17,7 @@ RSpec.feature "Contact user", :type => :feature do
       fill_in('message_body', with: 'a' * 20)
       find('form .send-message-to-user').trigger('click')
       expect(page).not_to have_selector('.contact-user form')
-      expect(page).to have_selector('.contacted-user', text: 'Message has been sent')
+      expect(page).to have_selector('.contact-user .contacted-user', text: 'Message has been sent')
     end
 
     scenario 'sees an already contacted message' do 
