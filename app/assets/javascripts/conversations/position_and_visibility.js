@@ -2,6 +2,10 @@ $(document).on('turbolinks:load', function() {
   chat_windows_count = $('.conversation-window').length;
 
   if (gon.last_visible_chat_window == null && chat_windows_count > 0) {
+    gon.last_visible_chat_window = chat_windows_count;
+  }
+
+  if (gon.hidden_chats == null) {
     gon.hidden_chats = 0;
   }
 

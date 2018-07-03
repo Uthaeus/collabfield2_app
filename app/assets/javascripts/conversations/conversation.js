@@ -1,5 +1,5 @@
 $(document).on('turbolinks:load', function() {
-  $('messages-list').scrollTop(500);
+  $('.messages-list').scrollTop(500);
 
   $(document).on('keydown', '.conversation-window, .conversation', function(event) {
     if (event.keyCode === 13) {
