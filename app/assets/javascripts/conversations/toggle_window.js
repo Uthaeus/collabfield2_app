@@ -15,4 +15,21 @@ $(document).on('turbolinks:load', function() {
         }
     });
   });
+  $('#conversations-menu').on('click', 'li', function(e) {
+    var conv_id = $(this).attr('data-id');
+
+    if ($(this).attr('data-type') == 'private') {
+        var conv_type = '#pc';
+    } else {
+        var conv_type = '#gc';
+    }
+    var conversation_window = $(conv_type + conv_id);
+
+    if (conversation_window.length) {
+        if (conversation_window.find('.panel-body').css('display') == 'none') {
+            conversation_window.find('.conversation-heading').click();
+        }
+        conversation_window.find('form textarea').click().focus();
+    }
+  });
 });
