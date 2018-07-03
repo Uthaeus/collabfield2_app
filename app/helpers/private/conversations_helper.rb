@@ -1,4 +1,5 @@
 module Private::ConversationsHelper
+  include Shared::ConversationsHelper
 
   def private_conv_recipient(conversation)
     conversation.opposed_user(current_user)
