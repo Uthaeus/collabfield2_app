@@ -1,3 +1,4 @@
+<% @contact = get_contact_record(@recipient) %>
 <% @recipient = private_conv_recipient(conversation) %>
 <% is_messenger = false %>
 
@@ -9,6 +10,7 @@
     <%= render 'private/conversations/conversation/heading', conversation: conversation %>
 
     <div class="panel-body">
+      <%= render 'private/conversations/conversation/request_status' %>
       <%= render 'private/conversations/conversation/messages_list', conversation: conversation %>
       <%= render 'private/conversations/conversation/new_message_form', conversation: conversation, user: user %>
     </div>
