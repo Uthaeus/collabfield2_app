@@ -15,6 +15,9 @@ class User < ApplicationRecord
             class_name: "Contact",
             foreign_key: "contact_id"
 
+  has_many :group_messages, class_name: 'Group::Message'
+  has_and_belongs_to_many :group_conversations, class_name: 'Group::Conversation'
+
   has_many :accepted_sent_contact_requests, -> { where(contacts: { accepted: true }) },
             through: :contacts,
             source: :contact 
