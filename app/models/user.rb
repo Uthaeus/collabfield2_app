@@ -29,7 +29,7 @@ class User < ApplicationRecord
 
   has_many :pending_received_contact_requests, -> { where(contacts: { accepted: false }) },
             through: :all_received_contact_requests,
-            source: user 
+            source: :user 
 
 
   def all_active_contacts
