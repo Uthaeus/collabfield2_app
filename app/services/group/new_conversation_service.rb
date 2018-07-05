@@ -15,7 +15,7 @@ class Group::NewConversationService
 
     if new_group_conversation.save
       arr_of_users_ids = [creator.id, pchat_opposed_user.id, new_user_to_chat.id]
-      creator.new_group_conversations << new_group_conversation
+      creator.group_conversations << new_group_conversation
       pchat_opposed_user.group_conversations << new_group_conversation
       new_user_to_chat.group_conversations << new_group_conversation
 

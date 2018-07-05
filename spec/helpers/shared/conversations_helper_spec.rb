@@ -63,7 +63,7 @@ RSpec.describe Shared::ConversationsHelper, :type => :helper do
     it 'returns an empty string' do 
       user = create(:user)
       conversation = create(:group_conversation)
-      message= build(:group_message, conversation_id: conversation.id)
+      message = build(:group_message, conversation_id: conversation.id)
       message.seen_by << user.id 
       message.save
       view.stub(:current_user).and_return(user)

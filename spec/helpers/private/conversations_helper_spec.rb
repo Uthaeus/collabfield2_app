@@ -177,7 +177,7 @@ RSpec.describe Private::ConversationsHelper, type: :helper do
       helper.stub(:recipient_is_contact?).and_return(false)
       helper.stub(:unaccepted_contact_exists).and_return(true)
       expect(helper.not_contact_no_request_partial_path(contact)).to eq(
-        'share/empty_partial'
+        'shared/empty_partial'
       )
     end
   end

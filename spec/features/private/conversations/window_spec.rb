@@ -22,7 +22,7 @@ RSpec.feature "window", :type => :feature do
   scenario 'user closes a conversation', js: true do 
     open_window
     find('.conversation-window .close-conversation').trigger('click')
-    expect(page).not_to have_selector('.conversation-window')
+    expect(page.has_no_selector?('.conversation-window')).to eq true
   end
 
   scenario 'user sends a message', js: true do 

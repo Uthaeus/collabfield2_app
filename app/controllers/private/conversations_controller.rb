@@ -7,6 +7,7 @@ class Private::ConversationsController < ApplicationController
     if @conversation.save
       Private::Message.create(user_id: recipient_id, conversation_id: @conversation.id, body: params[:message_body])
       add_to_conversations unless already_added?
+      
       respond_to do |format|
         format.js { render partial: 'posts/show/contact_user/message_form/success' }
       end

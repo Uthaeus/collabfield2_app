@@ -58,7 +58,7 @@ RSpec.describe User, type: :model do
 
     it 'has_and_belong_to_many group_conversations' do 
       association = described_class.reflect_on_association(:group_conversations)
-      expect(association.macro).to eq :has_and_belong_to_many
+      expect(association.macro).to eq :has_and_belongs_to_many
       expect(association.options[:class_name]).to eq 'Group::Conversation'
     end
   end
