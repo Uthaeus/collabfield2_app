@@ -11,5 +11,9 @@
                 remote: true,
                 method: :post,
                 class: 'bigger-screen-link' %>
-
+    <%= link_to recipient.name,
+            open_messenger_path(id: recipient_id,
+                                smaller_device: true,
+                                type: 'private'),
+            class: 'smaller-screen-link' %>
 </li>
