@@ -56,7 +56,7 @@ RSpec.describe Group::MessagesHelper, type: :helper do
     let(:previous_message) { create(:group_message) }
 
     it "returns a new_date partial's path" do 
-      new_message.update(create_at: 2.days.ago)
+      new_message.update(created_at: 2.days.ago)
       expect(helper.group_message_date_check_partial_path(new_message, previous_message)).to eq(
         'group/messages/message/new_date'
       )

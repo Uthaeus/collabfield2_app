@@ -12,7 +12,7 @@ App.private_conversation = App.cable.subscriptions.create("Private::Conversation
         // set variables
         var conversation = findConv(data['conversation_id'], 'p');
         var conversation_rendered = ConvRendered(data['conversation_id'], 'p');
-        var messages_visible = ConvMessagesVisiblity(conversation);
+        var messages_visible = ConvMessagesVisibility(conversation);
     
         if (data['recipient'] == true) {
             // append a link to the conversation if it doesn't exist

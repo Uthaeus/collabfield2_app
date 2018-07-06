@@ -20,7 +20,7 @@ function subToGroupConversationChannel(id) {
                 // set variables
                 var conversation = findConv(data['conversation_id'], 'g');
                 var conversation_rendered = ConvRendered(data['conversation_id'], 'g');
-                var messages_visible = ConvMessagesVisiblity(conversation);
+                var messages_visible = ConvMessagesVisibility(conversation);
 
                 // if the message is not sent by the user, 
                 // mark the conversation as unseen
