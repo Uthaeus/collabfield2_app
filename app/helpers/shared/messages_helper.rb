@@ -16,4 +16,16 @@ module Shared::MessagesHelper
     end
   end
 
+  def autoload_messenger_messages
+    if @is_messenger == 'true'
+      if @messages_to_display_offset != 0 
+        'shared/load_more_messages/messenger/load_previous_messages'
+      else
+        'shared/load_more_messages/messenger/remove_previous_messages_link'
+      end
+    else
+      'shared/empty_partial'
+    end
+  end
+
 end
