@@ -2,7 +2,7 @@ module Shared::MessagesHelper
 
   def append_previous_messages_partial_path
     if @is_messenger == 'true'
-    'shared/load_more_messages/window/append_messages'
+    'shared/load_more_messages/messenger/append_messages'
     else
       'shared/load_more_messages/window/append_messages'
     end
