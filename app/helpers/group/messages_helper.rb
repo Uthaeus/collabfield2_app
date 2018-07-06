@@ -1,6 +1,7 @@
-require 'shared/messages_helper'
+
 
 module Group::MessagesHelper
+  require 'shared/messages_helper'
   include Shared::MessagesHelper
 
   def replace_link_to_group_messages_partial_path
@@ -22,7 +23,7 @@ module Group::MessagesHelper
   def group_message_seen_by(message)
     seen_by_names = []
 
-    if message.nseen_by.present?
+    if message.seen_by.present?
       message.seen_by.each do |user_id|
         seen_by_names << User.find(user_id).name 
       end

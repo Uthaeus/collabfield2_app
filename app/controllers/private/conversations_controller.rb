@@ -5,7 +5,7 @@ class Private::ConversationsController < ApplicationController
     @conversation = Private::Conversation.new(sender_id: current_user.id, recipient_id: recipient_id)
 
     if @conversation.save
-      Private::Message.create(user_id: recipient_id, conversation_id: @conversation.id, body: params[:message_body])
+      Private::Message.create(user_id: current_user.id, conversation_id: @conversation.id, body: params[:message_body])
       add_to_conversations unless already_added?
       
       respond_to do |format|

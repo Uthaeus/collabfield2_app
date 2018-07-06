@@ -16,7 +16,7 @@ function ConvRendered(conversation_id, type) {
   } else {
     var data_attr = "[data-" + type + "conversation-id=" + conversation_id + "']";
     var conversation = $('body').find(data_attr);
-    return conversation.is('visible');
+    return conversation.is(':visible');
   }
 }
 

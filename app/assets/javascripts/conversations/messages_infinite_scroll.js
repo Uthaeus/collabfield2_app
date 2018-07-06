@@ -18,8 +18,8 @@ $(document).on('turbolinks:load ajax:complete', function() {
 
     } else {
       if (iCurScrollPos < 300 && isLoading == false && ('.load-more-messages', this).length) {
-        $('.load-more-messages', this)[0].click();
         isLoading = true;
+        $('.load-more-messages', this)[0].click();
 
         currentLoadingIcon = $('.loading-more-messages', this);
         currentLoadingIcon.show();
