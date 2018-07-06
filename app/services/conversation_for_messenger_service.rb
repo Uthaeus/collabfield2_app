@@ -8,7 +8,7 @@ class ConversationForMessengerService
 
   def call
     if @conversation_type == 'private'
-      Private::Coversation.between_users(@user1_id, @user2_id)[0]
+      Private::Conversation.between_users(@user1_id, @user2_id)[0]
     else
       Group::Conversation.find(@group_conversation_id)
     end
